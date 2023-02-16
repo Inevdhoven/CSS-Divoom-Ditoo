@@ -1,0 +1,268 @@
+:root {
+    --rotateY: 0deg;
+    --rotateX: 0deg;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(43, 43, 78);
+}
+
+main {
+    display: grid;
+    place-items: center;
+}
+
+main article {
+    margin-top: 5em;
+    perspective: 600px;
+}
+
+main article section:first-of-type {
+    --width: 12em;
+    --height: 12em;
+    width: var(--width);
+    height: var(--height);
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(var(--rotateX)) rotateY(var(--rotateY));
+    margin: 5em;
+}
+
+main section:first-of-type ul {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+main section:first-of-type ul:first-of-type {
+    transform: rotateX(5deg) translateZ(-0.5em) translateY(-0.9em);
+}
+
+main section:first-of-type ul:nth-of-type(3) {
+    transform: translateZ(-1em) translateY(-14.5em) translateX(2em);
+}
+
+main section:first-of-type ul li {
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+}
+
+main section:first-of-type ul:nth-of-type(2) li {
+    --width: 12em;
+    --height: 4em;
+    width: var(--width);
+    height: var(--height);
+}
+
+main section:first-of-type ul:nth-of-type(3) li {
+    --width: 8em;
+    --height: 3em;
+    width: var(--width);
+    height: var(--height);
+}
+
+/* Front */
+main section:first-of-type ul li:first-of-type,
+main section:first-of-type ul:nth-of-type(2) li:first-of-type {
+    background-color: coral;
+    transform: rotateY(0deg) translateZ(6em);
+}
+
+main section:first-of-type ul:nth-of-type(2) li:first-of-type {
+    transform: rotateY(0deg) translateZ(12em);
+}
+
+main section:first-of-type ul:nth-of-type(3) li:first-of-type {
+    transform: rotateY(0deg) translateZ(4em);
+}
+
+/* Right */
+main section:first-of-type ul li:nth-of-type(2),
+main section:first-of-type ul:nth-of-type(2)  li:nth-of-type(2) {
+    background-color: lightgreen;
+    transform: rotateY(90deg) translateZ(6em);
+}
+
+main section:first-of-type ul:nth-of-type(2) li:nth-of-type(2) {
+    --width: 18em;
+    --height: 4em;
+    width: var(--width);
+    height: var(--height);
+    transform: rotateY(90deg) translateZ(3em) translateX(-3em);
+}
+
+main section:first-of-type ul:nth-of-type(3) li:nth-of-type(2) {
+    transform: rotateY(90deg) translateZ(4em);
+}
+
+/* Back */
+main section:first-of-type ul li:nth-of-type(3),
+main section:first-of-type ul:nth-of-type(2)  li:nth-of-type(3) {
+    background-color: lightblue;
+    transform: rotateY(180deg) translateZ(6em);
+}
+
+main section:first-of-type ul:nth-of-type(3) li:nth-of-type(3) {
+    transform: rotateY(180deg) translateZ(4em);
+}
+
+/* Left */
+main section:first-of-type ul li:nth-of-type(4),
+main section:first-of-type ul:nth-of-type(2)  li:nth-of-type(4) {
+    background-color: lightyellow;
+    transform: rotateY(-90deg) translateZ(6em);
+}
+
+main section:first-of-type ul:nth-of-type(2) li:nth-of-type(4) {
+    --width: 18em;
+    --height: 4em;
+    width: var(--width);
+    height: var(--height);
+    transform: rotateY(-90deg) translateZ(9em) translateX(3em);
+}
+
+main section:first-of-type ul:nth-of-type(3) li:nth-of-type(4) {
+    transform: rotateY(-90deg) translateZ(4em);
+}
+
+/* Top */
+main section:first-of-type ul li:nth-of-type(5),
+main section:first-of-type ul:nth-of-type(2)  li:nth-of-type(5) {
+    background-color: lightpink;
+    transform: rotateX(90deg) translateZ(6em);
+}
+
+main section:first-of-type ul:nth-of-type(2)  li:nth-of-type(5) {
+    --width: 12em;
+    --height: 18em;
+    width: var(--width);
+    height: var(--height);
+    transform: rotateX(90deg) translateZ(9em) translateY(3em);
+}
+
+main section:first-of-type ul:nth-of-type(3) li:nth-of-type(5) {
+    --width: 8em;
+    --height: 8em;
+    width: var(--width);
+    height: var(--height);
+    transform: rotateX(90deg) translateZ(4em);
+}
+
+/* Bottom */
+main section:first-of-type ul li:nth-of-type(6),
+main section:first-of-type ul:nth-of-type(2)  li:nth-of-type(6) {
+    background-color: lightgrey;
+    transform: rotateX(-90deg) translateZ(6em);
+}
+
+main section:first-of-type ul:nth-of-type(2)  li:nth-of-type(6) {
+    --width: 12em;
+    --height: 18em;
+    width: var(--width);
+    height: var(--height);
+    transform: rotateX(-90deg) translateZ(-5em) translateY(-3em);
+}
+
+main section:first-of-type ul:nth-of-type(3) li:nth-of-type(6) {
+    --width: 8em;
+    --height: 8em;
+    width: var(--width);
+    height: var(--height);
+    transform: rotateX(-90deg) translateZ(-1em);
+}
+
+
+/* body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding-top: 10em;
+    background-color: rgb(43, 43, 78);
+}
+
+body article {
+    perspective: 600px;
+}
+
+body section {
+    rotate: y var(--rotateY);
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+body section ul {
+    --width: 25em;
+    --height: 20em;
+    --depth: 20em;
+    width: var(--width);
+    height: var(--height);
+    margin: 0 auto;
+    position: absolute;
+    transform: rotateX(20deg) rotateY(25deg);
+    transform-style: preserve-3d;
+    list-style: none;
+}
+
+body section ul:first-of-type {
+    transform: rotateX(20deg) rotateY(25deg) translateZ(5em) translateY(0.7em);
+}
+
+body section ul li {
+    background-color: rgba(211, 235, 255, 0.2);
+    border: 1px solid rgb(255, 255, 255);
+    position: absolute;
+}
+
+body > section ul li:first-of-type,
+body > section ul li:nth-of-type(2) {
+    --coefficient: -0.5;
+    width: var(--width);
+    height: var(--height);
+    transform: translate3d(0, 0, calc(var(--depth) * var(--coefficient)));
+}
+
+body section ul li:nth-of-type(2) {
+    --coefficient: 0.5;
+}
+
+body section ul li:nth-of-type(3),
+body section ul li:nth-of-type(4) {
+    --rotation: 90deg;
+    height: var(--height);
+    width: var(--depth);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateY(var(--rotation)) translate3d(0, 0, calc(var(--width) * -0.5));
+}
+
+body section ul li:nth-of-type(4) {
+    --rotation: -90deg;
+}
+
+body section ul li:nth-of-type(5),
+body section ul li:nth-of-type(6) {
+    --rotation: -90deg;
+    width: var(--width);
+    height: var(--depth);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateX(var(--rotation)) translate3d(0, 0, calc(var(--height) * -0.5));
+}
+
+body section ul li:nth-of-type(6) {
+    --rotation: 90deg;
+}
+
+body section ul:nth-of-type(2) {
+    --width: 25em;
+    --height: 5em;
+    --depth: 30em;
+} */
