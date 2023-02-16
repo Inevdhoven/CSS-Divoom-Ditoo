@@ -17,10 +17,10 @@ main {
 
 main article {
     margin-top: 5em;
-    perspective: 600px;
+    perspective: 400px;
 }
 
-main article section:first-of-type {
+main article:first-of-type section:first-of-type {
     --width: 12em;
     --height: 12em;
     width: var(--width);
@@ -31,7 +31,8 @@ main article section:first-of-type {
     margin: 5em;
 }
 
-main section:first-of-type ul {
+main section:first-of-type ul,
+main section:nth-of-type(2) ul {
     width: 100%;
     height: 100%;
     position: relative;
@@ -53,6 +54,7 @@ main section:first-of-type ul li {
     width: var(--width);
     height: var(--height);
     position: absolute;
+    opacity: 0.5;
 }
 
 main section:first-of-type ul:nth-of-type(2) li {
@@ -179,6 +181,58 @@ main section:first-of-type ul:nth-of-type(3) li:nth-of-type(6) {
     transform: rotateX(-90deg) translateZ(-1em);
 }
 
+/* Section 2 Keys */
+main section:first-of-type ul:nth-of-type(2) li:nth-of-type(7) form {
+    --width: 12em;
+    --height: 12em;
+    width: var(--width);
+    height: var(--height);
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+main section:first-of-type ul:nth-of-type(2) li:nth-of-type(7) label:first-of-type {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+main section:first-of-type label:first-of-type span {
+    width: 2em;
+    height: 2em;
+    display: block;
+    position: absolute;
+}
+
+/* Front */
+main ul:nth-of-type(2) li:nth-of-type(7) form:first-of-type label:first-of-type span:first-of-type {
+    background-color: aquamarine;
+    transform: rotateY(0deg) translateZ(1em);
+}
+
+/* Right */
+main ul:nth-of-type(2) li:nth-of-type(7) form:first-of-type label:first-of-type span:nth-of-type(2) {
+    background-color: crimson;
+    transform: rotateY(90deg) translateZ(1em) translateY(0em);
+}
+
+/* Back */
+main ul:nth-of-type(2) li:nth-of-type(7) form:first-of-type label:first-of-type span:nth-of-type(3) {
+    background-color: darkturquoise;
+    transform: rotateY(180deg) translateZ(1em) translateY(0em);
+}
+
+/* Left */
+main ul:nth-of-type(2) li:nth-of-type(7) form:first-of-type label:first-of-type span:nth-of-type(4) {
+    background-color: lightpink;
+    transform: rotateY(-90deg) translateZ(1em) translateY(0em);
+}
+
+/* Top */
+main ul:nth-of-type(2) li:nth-of-type(7) form:first-of-type label:first-of-type span:nth-of-type(5) {
+    background-color: steelblue;
+    transform: rotateX(90deg) translateZ(1em) translateY(0em);
+}
 
 /* body {
     width: 100vw;
