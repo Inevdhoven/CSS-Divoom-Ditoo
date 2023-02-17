@@ -17,7 +17,7 @@ main {
 
 main article {
     margin-top: 5em;
-    perspective: 400px;
+    perspective: 600px;
 }
 
 main article:first-of-type section:first-of-type {
@@ -182,19 +182,14 @@ main section:first-of-type ul:nth-of-type(3) li:nth-of-type(6) {
 }
 
 /* Section 2 Keys */
-main section:first-of-type ul:nth-of-type(2) li:nth-of-type(7) form {
-    --width: 12em;
-    --height: 12em;
-    width: var(--width);
-    height: var(--height);
-    position: relative;
+main section:first-of-type ul:nth-of-type(2) li:nth-of-type(7) {
     transform-style: preserve-3d;
+    transform: translateY(7em)
 }
 
-main section:first-of-type ul:nth-of-type(2) li:nth-of-type(7) label:first-of-type {
-    width: 100%;
-    height: 100%;
+main section:first-of-type ul:nth-of-type(2) li:nth-of-type(7) label {
     transform-style: preserve-3d;
+    display: block;
 }
 
 main section:first-of-type label:first-of-type span {
@@ -205,33 +200,33 @@ main section:first-of-type label:first-of-type span {
 }
 
 /* Front */
-main ul:nth-of-type(2) li:nth-of-type(7) form:first-of-type label:first-of-type span:first-of-type {
+main ul:nth-of-type(2) li:nth-of-type(7) label span:first-of-type {
     background-color: aquamarine;
-    transform: rotateY(0deg) translateZ(1em);
+    transform: rotateY(0deg);
 }
 
 /* Right */
-main ul:nth-of-type(2) li:nth-of-type(7) form:first-of-type label:first-of-type span:nth-of-type(2) {
+main ul:nth-of-type(2) li:nth-of-type(7) label span:nth-of-type(2) {
     background-color: crimson;
-    transform: rotateY(90deg) translateZ(1em) translateY(0em);
+    transform: rotateY(90deg);
 }
 
 /* Back */
-main ul:nth-of-type(2) li:nth-of-type(7) form:first-of-type label:first-of-type span:nth-of-type(3) {
+main ul:nth-of-type(2) li:nth-of-type(7) label span:nth-of-type(3) {
     background-color: darkturquoise;
-    transform: rotateY(180deg) translateZ(1em) translateY(0em);
+    transform: rotateY(180deg);
 }
 
 /* Left */
-main ul:nth-of-type(2) li:nth-of-type(7) form:first-of-type label:first-of-type span:nth-of-type(4) {
+main ul:nth-of-type(2) li:nth-of-type(7) label span:nth-of-type(4) {
     background-color: lightpink;
-    transform: rotateY(-90deg) translateZ(1em) translateY(0em);
+    transform: rotateY(-90deg);
 }
 
 /* Top */
-main ul:nth-of-type(2) li:nth-of-type(7) form:first-of-type label:first-of-type span:nth-of-type(5) {
+main ul:nth-of-type(2) li:nth-of-type(7) label span:nth-of-type(5) {
     background-color: steelblue;
-    transform: rotateX(90deg) translateZ(1em) translateY(0em);
+    transform: rotateX(90deg);
 }
 
 /* body {
