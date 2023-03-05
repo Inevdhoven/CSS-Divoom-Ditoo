@@ -1,15 +1,25 @@
 :root {
-    --rotateY: 0deg;
-    --rotateX: 0deg;
+    /* --rotateY: 0deg;
+    --rotateX: 0deg; */
+
+    --rotateY: 345deg;
+    --rotateX: 341deg;
 
     --green: rgb(116 238 21);
     --purple: rgb(157 0 255);
     --yellow: rgb(255 231 0);
     --blue: rgb(77 238 234);
+    --blueblue: rgb(45,68,245);
     --pink: rgb(240 0 255);
     --orange: rgb(245 86 0);
     --red: rgb(253 2 1);
     --black: rgb(31 31 31);
+
+    --computer-black: rgb(64,62,63);
+    --computer-darkerblack: rgb(36, 36, 36);
+    --computer-blue: rgb(179,234,255);
+    --computer-lightorange: rgb(255,213,164);
+    --computer-darkorange: rgb(254,140,81);
 }
 
 * {
@@ -88,37 +98,37 @@ main > section > article ul li {
 /* SCREEN */
 /* FRONT */
 main > section > article ul li:first-of-type {
-  background-color: #f0f5;
+  background-color: var(--computer-lightorange);
   transform: rotateY(0deg) translateZ(6em);
 }
 
 /* RIGHT */
 main > section > article ul li:nth-of-type(2) {
-  background-color: #f0f5;
+  background-color: var(--computer-blue);
   transform: rotateY(90deg) translateZ(6em);
 }
 
 /* BACK */
 main > section > article ul li:nth-of-type(3) {
-  background-color: #f0f5;
+  background-color: var(--computer-blue);
   transform: rotateY(180deg) translateZ(6em);
 }
 
 /* LEFT */
 main > section > article ul li:nth-of-type(4) {
-  background-color: #f0f5;
+  background-color: var(--computer-blue);
   transform: rotateY(-90deg) translateZ(6em);
 }
 
 /* TOP */
 main > section > article ul li:nth-of-type(5) {
-  background-color: #f0f5;
+  background-color: var(--computer-blue);
   transform: rotateX(90deg) translateZ(6em);
 }
 
 /* BOTTOM */
 main > section > article ul li:nth-of-type(6) {
-  background-color: #f0f5;
+  background-color: var(--computer-blue);
   transform: rotateX(90deg) translateZ(-6em);
 }
 
@@ -126,14 +136,14 @@ main > section > article ul li:nth-of-type(6) {
 main > section > article ul li:nth-of-type(7) {
     width: 10em;
     height: 10em;
-    border-radius: 1em;
+    /* border-radius: 1em; */
 
     display: grid;
     place-items: center;
 
     position: relative;
 
-    background-color: #00f5;
+    background-color: black;
     transform: translateX(1em) translateY(1em) translateZ(6em);
 }
 
@@ -771,9 +781,206 @@ main > section > article ul:first-of-type li:nth-of-type(7) div:first-of-type::a
     content: '';
 }
 
-/* main > section > article ul:first-of-type li:nth-of-type(7) div:nth-of-type(2) {
+main > section > article ul:first-of-type li:nth-of-type(7) div:nth-of-type(2) {
+    width: 1em;
+    height: 1em;
+
+    position: absolute;
+    top: -1em;
+    left: -1em;
+  
+    box-shadow:
+        1em 1em var(--black),
+        2em 1em var(--black),
+        3em 1em var(--black),
+        4em 1em var(--black),
+        5em 1em var(--black),
+        6em 1em var(--blueblue),
+        7em 1em var(--black),
+        8em 1em var(--black),
+        9em 1em var(--black),
+        10em 1em var(--black),
+        
+        1em 2em var(--blueblue),
+        2em 2em var(--black),
+        3em 2em var(--blueblue),
+        4em 2em var(--blueblue),
+        5em 2em var(--black),
+        6em 2em var(--blueblue),
+        7em 2em var(--black),
+        8em 2em var(--blueblue),
+        9em 2em var(--blueblue),
+        10em 2em var(--blueblue),
+        
+        1em 3em var(--black),
+        2em 3em var(--black),
+        3em 3em var(--black),
+        4em 3em var(--black),
+        5em 3em var(--black),
+        6em 3em var(--blueblue),
+        7em 3em var(--black),
+        8em 3em var(--black),
+        9em 3em var(--black),
+        10em 3em var(--black),
+        
+        1em 4em var(--black),
+        2em 4em var(--blueblue),
+        3em 4em var(--blueblue),
+        4em 4em var(--blueblue),
+        5em 4em var(--black),
+        6em 4em var(--black),
+        7em 4em var(--black),
+        8em 4em var(--blueblue),
+        9em 4em var(--black),
+        10em 4em var(--blueblue),
+        
+        1em 5em var(--black),
+        2em 5em var(--black),
+        3em 5em var(--blueblue),
+        4em 5em var(--black),
+        5em 5em var(--black),
+        6em 5em var(--blueblue),
+        7em 5em var(--black),
+        8em 5em var(--black),
+        9em 5em var(--black),
+        10em 5em var(--black),
+        
+        1em 6em var(--blueblue),
+        2em 6em var(--black),
+        3em 6em var(--blueblue),
+        4em 6em var(--black),
+        5em 6em var(--blueblue),
+        6em 6em var(--blueblue),
+        7em 6em var(--blueblue),
+        8em 6em var(--black),
+        9em 6em var(--blueblue),
+        10em 6em var(--black),
+        
+        1em 7em var(--black),
+        2em 7em var(--black),
+        3em 7em var(--black),
+        4em 7em var(--black),
+        5em 7em var(--black),
+        6em 7em var(--black),
+        7em 7em var(--black),
+        8em 7em var(--black),
+        9em 7em var(--blueblue),
+        10em 7em var(--blueblue),
+        
+        1em 8em var(--black),
+        2em 8em var(--blueblue),
+        3em 8em var(--black),
+        4em 8em var(--blueblue),
+        5em 8em var(--black),
+        6em 8em var(--blueblue),
+        7em 8em var(--blueblue),
+        8em 8em var(--black),
+        9em 8em var(--black),
+        10em 8em var(--black),
+        
+        1em 9em var(--black),
+        2em 9em var(--blueblue),
+        3em 9em var(--black),
+        4em 9em var(--blueblue),
+        5em 9em var(--black),
+        6em 9em var(--blueblue),
+        7em 9em var(--blueblue),
+        8em 9em var(--black),
+        9em 9em var(--blueblue),
+        10em 9em var(--black),
+        
+        1em 10em var(--black),
+        2em 10em var(--black),
+        3em 10em var(--black),
+        4em 10em var(--blueblue),
+        5em 10em var(--black),
+        6em 10em var(--black),
+        7em 10em var(--black),
+        8em 10em var(--black),
+        9em 10em var(--blueblue),
+        10em 10em var(--black);
+
+    opacity: 0;
+}
+
+main > section > article ul:first-of-type li:nth-of-type(7) div:nth-of-type(3) {
+    width: 0.7em;
+    height: 0.7em;
+    border-radius: 50%;
     
-} */
+    position: absolute;
+    top: 0.5em;
+    left: 0.5em;
+    
+    background-image:
+        conic-gradient(yellow 0 15%, transparent 0 35%, yellow 0 100%);
+    
+    offset-path: path('M0.5 1H64.5V32.5H0.5V64.5H16.5V97.5H0.5V144H32.5V97.5H64.5V144H112V64.5H97V32.5H145.5');
+    
+    animation: distance 10s infinite linear, pacman 500ms infinite linear;
+
+    opacity: 0;
+}
+
+main > section > article ul:first-of-type li:nth-of-type(7) div:nth-of-type(4) {
+    width: 0.7em;
+    height: 0.7em;
+    border-radius: 50% 50% 0 0;
+    
+    background:  conic-gradient(hotpink 37.5%, transparent 0 40%, transparent 0 62.5%, hotpink 0 100%);
+    
+    position: absolute;
+    top: 0.5em;
+    left: 0.4em;
+    
+    offset-path: path('M145.5 146.5L145 113H113.5V64.5H129.5V32.5H98V47.5H65.5V32.5H0.5V64.5H16.5V95.5H49.5V64.5H65.5V0.5H0.5');
+    offset-rotate: 0deg;
+    
+    animation: distance 10s infinite linear;
+
+    opacity: 0;
+}
+
+main > section > article ul:first-of-type li:nth-of-type(7) div:nth-of-type(4)::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border: 0.4em solid transparent;
+    border-top: 0;
+    border-bottom: 0.4em solid hotpink;
+    
+    transform: rotate(180deg);
+    position: absolute;
+    bottom: 0;
+}
+
+main > section > article ul:first-of-type li:nth-of-type(7) div:nth-of-type(5)::before {
+    content: '';
+    width: 10em;
+    height: 10em;
+
+    display: block;
+
+    background: linear-gradient(transparent 0 5em, #60BFFF 5em, #26547C 10em), radial-gradient(circle closest-side, yellow 1em, transparent 3em), linear-gradient(rgb(48,13,93) 0 0.5em, rgb(158,68,121) 2em, rgb(237,79,128) 3em, rgb(255,72,64) 4em, rgb(255,123,0) 5em);
+
+    opacity: 0;
+}
+
+main > section > article ul:first-of-type li:nth-of-type(7) div:nth-of-type(5)::after {
+    content: '';
+    width: 10em;
+    height: 10em;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background: radial-gradient(circle at center, hsl(212, 67%, 36%) 0%,hsl(206, 70%, 70%) 100%);
+
+    animation: hue-rotate 10s infinite ease;
+
+    opacity: 0;
+}
 
 @keyframes changeCollor {
     0% {
@@ -6011,44 +6218,75 @@ main > section > article ul:first-of-type li:nth-of-type(7) div:first-of-type::a
     }
 }
 
+@keyframes distance {
+    100% {
+        offset-distance: 100%;
+    }
+}
+  
+@keyframes pacman {
+    0% {
+        background-image:
+        conic-gradient(yellow 0 15%, transparent 0 35%, yellow 0 100%);
+    } 50% {
+        background-image:
+        conic-gradient(yellow 0 15%, transparent 0 0, yellow 0 100%);
+    } 100% {
+        background-image:
+        conic-gradient(yellow 0 15%, transparent 0 35%, yellow 0 100%);
+    }
+}
+
+@keyframes hue-rotate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(360deg);
+    }
+    100% {
+        filter: hue-rotate(0deg);
+    }
+}
+
 
 
 /* SPACER */
 /* FRONT */
 main > section > article ul:nth-of-type(2) li:first-of-type {
-    background-color: #0005;
+    background-color: var(--computer-blue);
     transform: rotateY(0deg) translateZ(4em);
 } 
 
 /* RIGHT */
 main > section > article ul:nth-of-type(2) li:nth-of-type(2) {
-    background-color: #0005;
+    background-color: var(--computer-blue);
     transform: rotateY(90deg) translateZ(4em);
 }
 
 /* BACK */
 main > section > article ul:nth-of-type(2) li:nth-of-type(3) {
-    background-color: #0005;
+    background-color: var(--computer-blue);
     transform: rotateY(180deg) translateZ(4em);
 }
 
 /* LEFT */
 main > section > article ul:nth-of-type(2) li:nth-of-type(4) {
-    background-color: #0005;
+    background-color: var(--computer-blue);
     transform: rotateY(-90deg) translateZ(4em);
 }
 
 /* TOP */
 main > section > article ul:nth-of-type(2) li:nth-of-type(5) {
     height: 8em;
-    background-color: #0005;
+    background-color: var(--computer-blue);
     transform: rotateX(90deg) translateZ(4em);
 }
 
 /* BOTTOM */
 main > section > article ul:nth-of-type(2) li:nth-of-type(6) {
     height: 8em;
-    background-color: #0005;
+    background-color: var(--computer-blue);
     transform: rotateX(90deg) translateZ(1em);
 }
 
@@ -6059,41 +6297,41 @@ main > section > article ul:nth-of-type(2) li:nth-of-type(6) {
 /* KEYBOARD */
 /* FRONT */
 main > section > article ul:nth-of-type(3) li:first-of-type {
-    background-color: #f0f5;
+    background-color: var(--computer-blue);
     transform: rotateY(0deg) translateZ(12em);
 }
 
 /* RIGHT */
 main > section > article ul:nth-of-type(3) li:nth-of-type(2) {
     width: 18em;
-    background-color: #f0f5;
+    background-color: var(--computer-blue);
     transform: rotateY(90deg)  translateX(-3em) translateZ(3em);
 }
 
 /* BACK */
 main > section > article ul:nth-of-type(3) li:nth-of-type(3) {
-    background-color: #f0f5;
+    background-color: var(--computer-blue);
     transform: rotateY(180deg) translateZ(6em);
 }
 
 /* LEFT */
 main > section > article ul:nth-of-type(3) li:nth-of-type(4) {
     width: 18em;
-    background-color: #f0f5;
+    background-color: var(--computer-blue);
     transform: rotateY(-90deg) translateX(3em) translateZ(9em);
 }
 
 /* TOP */
 main > section > article ul:nth-of-type(3) li:nth-of-type(5) {
     height: 18em;
-    background-color: #f0f5;
+    background-color: var(--computer-black);
     transform: rotateX(90deg) translateY(3em) translateZ(9em);
 }
 
 /* BOTTOM */
 main > section > article ul:nth-of-type(3) li:nth-of-type(6) {
     height: 18em;
-    background-color: #f0f5;
+    background-color: var(--computer-blue);
     transform: rotateX(90deg) translateY(3em) translateZ(5em);
 }
 
@@ -6136,10 +6374,6 @@ main > section > article ul:nth-of-type(3) li:nth-of-type(7) label input {
     appearance: none;
 }
 
-/* main > section > article ul:nth-of-type(3) li:nth-of-type(7) label input:checked + span {
-    background-color: red!important;
-} */
-
 main > section > article ul:nth-of-type(3) li:nth-of-type(7) form label span {
   width: 2em;
   height: 2em;
@@ -6149,32 +6383,36 @@ main > section > article ul:nth-of-type(3) li:nth-of-type(7) form label span {
 
 /* FRONT */
 main > section > article ul:nth-of-type(3) li:nth-of-type(7) label span:first-of-type {
-  background-color: #0f08;
+  background-color: var(--computer-lightorange);
   transform: rotateY(0deg) translateZ(1em);
 }
 
 /* RIGHT */
 main > section > article ul:nth-of-type(3) li:nth-of-type(7) label span:nth-of-type(2) {
-  background-color: #0f08;
+  background-color: var(--computer-lightorange);
   transform: rotateY(90deg) translateZ(1em);
 }
 
 /* BACK */
 main > section > article ul:nth-of-type(3) li:nth-of-type(7) label span:nth-of-type(3) {
-  background-color: #0f08;
+  background-color: var(--computer-lightorange);
   transform: rotateY(180deg) translateZ(1em);
 }
 
 /* LEFT */
 main > section > article ul:nth-of-type(3) li:nth-of-type(7) label span:nth-of-type(4) {
-  background-color: #0f08;
+  background-color: var(--computer-lightorange);
   transform: rotateY(-90deg) translateZ(1em);
 }
 
 /* TOP */
 main > section > article ul:nth-of-type(3) li:nth-of-type(7) label span:nth-of-type(5) {
-  background-color: #0f08;
+  background-color: var(--computer-lightorange);
   transform: rotateX(90deg) translateZ(1em);
+}
+
+main > section > article ul:nth-of-type(3) li:nth-of-type(7) label:first-of-type span {
+  background-color: var(--computer-darkorange);
 }
 
 
@@ -6250,34 +6488,34 @@ main > section > article ul:nth-of-type(3) li:nth-of-type(7) label:nth-of-type(7
 /* FRONT */
 main > section > article ul:nth-of-type(3) li:nth-of-type(7) label:nth-of-type(7) span:first-of-type {
     transform: translateY(1.8em) translateX(-0.5em) translateZ(1.9em);
-    background-color: #00f5;
+    background-color: var(--computer-darkerblack);
 }
 
 /* RIGHT */
 main > section > article ul:nth-of-type(3) li:nth-of-type(7) label:nth-of-type(7) span:nth-of-type(2) {
     width: 3.5em;
     transform: rotateY(90deg) translateY(1.8em) translateX(-0.16em) translateZ(-0.25em);
-    background-color: #00f5;
+    background-color: var(--computer-darkerblack);
 }
 
 /* BACK */
 main > section > article ul:nth-of-type(3) li:nth-of-type(7) label:nth-of-type(7) span:nth-of-type(3) {
     transform: translateY(1.8em) translateX(-0.5em) translateZ(-1.6em);
-    background-color: #00f5;
+    background-color: var(--computer-darkerblack);
 }
 
 /* LEFT */
 main > section > article ul:nth-of-type(3) li:nth-of-type(7) label:nth-of-type(7) span:nth-of-type(4) {
     width: 3.5em;
     transform: rotateY(90deg) translateY(1.8em) translateX(-0.16em) translateZ(-2.25em);
-    background-color: #00f5;
+    background-color: var(--computer-darkerblack);
 }
 
 /* TOP */
 main > section > article ul:nth-of-type(3) li:nth-of-type(7) label:nth-of-type(7) span:nth-of-type(5) {
     height: 3.5em;
     transform: rotateX(90deg) translateY(0.12em) translateX(-0.5em) translateZ(-0.1em);
-    background-color: #00f5;
+    background-color: var(--computer-darkerblack);
 }
 
 
@@ -6300,7 +6538,7 @@ main > section > article ul:nth-of-type(3) li:nth-of-type(8) form {
 
 
 
-/* Clicked Key */
+/* CLICKED KEY AND SWITCH */
 article:has(#key1:checked) label[for="key1"] span,
 article:has(#key2:checked) label[for="key2"] span,
 article:has(#key3:checked) label[for="key3"] span,
@@ -6345,10 +6583,12 @@ article:has(#key6:checked) label[for="key6"] {
     }
 }
 
-article:has(#key1:checked) ul:first-of-type li:nth-of-type(7) div:first-of-type::after {
-    opacity: 1;
-}
-
-article:has(#key2:checked) ul:first-of-type li:nth-of-type(7) div::before {
+article:has(#key1:checked) ul:first-of-type li:nth-of-type(7) div:first-of-type::after,
+article:has(#key2:checked) ul:first-of-type li:nth-of-type(7) div:first-of-type::before,
+article:has(#key3:checked) ul:first-of-type li:nth-of-type(7) div:nth-of-type(2),
+article:has(#key3:checked) ul:first-of-type li:nth-of-type(7) div:nth-of-type(3),
+article:has(#key3:checked) ul:first-of-type li:nth-of-type(7) div:nth-of-type(4),
+article:has(#key4:checked) ul:first-of-type li:nth-of-type(7) div:nth-of-type(5)::before,
+article:has(#key5:checked) ul:first-of-type li:nth-of-type(7) div:nth-of-type(5)::after {
     opacity: 1;
 }
