@@ -20,6 +20,7 @@
     --computer-blue: rgb(179,234,255);
     --computer-lightorange: rgb(255,213,164);
     --computer-darkorange: rgb(254,140,81);
+    --computer-darkblue: rgb(112, 200, 234);
 }
 
 * {
@@ -28,11 +29,17 @@
 
 input[type="range"] {
   position: relative;
-  /* left: 25em; */
 }
 
 body {
-  background: rgb(43, 43, 78);
+    /* background-image: 
+        radial-gradient(var(--blue) 20%, transparent 20%),
+        radial-gradient(var(--blueblue) 20%, transparent 20%);
+    background-position: 0 0, 1rem 1rem;
+    background-size: 2rem 2rem; */
+    background-color: rgb(43, 43, 78);
+    
+    /* animation: background 2s infinite; */
 }
 
 main {
@@ -980,6 +987,30 @@ main > section > article ul:first-of-type li:nth-of-type(7) div:nth-of-type(5)::
     animation: hue-rotate 10s infinite ease;
 
     opacity: 0;
+}
+
+main > section > article ul:first-of-type li:nth-of-type(7) div:nth-of-type(6) {
+    width: 10em;
+    height: 10em;
+
+    background: linear-gradient(145deg, rgb(255,1,0) 0 2rem, rgb(255,110,0) 0 4rem, rgb(254,255,0) 0 6rem, rgb(28,179,30) 0 8rem, rgb(0,210,255) 0 10rem, rgb(55,55,199) 0 12rem, rgb(211,0,255) 0 14rem);
+
+    opacity: 0;
+}
+
+main > section > article ul:first-of-type li:nth-of-type(7) div:nth-of-type(6)::before {
+    content: '';
+    
+    width: 10em;
+    height: 10em;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background: linear-gradient(45deg, rgb(255,1,0) 0 2rem, rgb(255,110,0) 0 4rem, rgb(254,255,0) 0 6rem, rgb(28,179,30) 0 8rem, rgb(0,210,255) 0 10rem, rgb(55,55,199) 0 12rem, rgb(211,0,255) 0 14rem);
+    
+    animation: mix-blend-mode 10s infinite linear;
 }
 
 @keyframes changeCollor {
@@ -6249,6 +6280,42 @@ main > section > article ul:first-of-type li:nth-of-type(7) div:nth-of-type(5)::
     }
 }
 
+@keyframes mix-blend-mode {
+    0% {
+        mix-blend-mode: normal;
+    }
+    10% {
+        mix-blend-mode: multiply;
+    }
+    20% {
+        mix-blend-mode: screen;
+    }
+    30% {
+        mix-blend-mode: hard-light;
+    }
+    40% {
+        mix-blend-mode: overlay;
+    }
+    50% {
+        mix-blend-mode: luminosity;
+    }
+    60% {
+        mix-blend-mode: color-dodge;
+    }
+    70% {
+        mix-blend-mode: color-burn;
+    }
+    80% {
+        mix-blend-mode: color;
+    }
+    90% {
+        mix-blend-mode: difference;
+    }
+    100% {
+        mix-blend-mode: normal;
+    }
+}
+
 
 
 /* SPACER */
@@ -6539,6 +6606,16 @@ main > section > article ul:nth-of-type(3) li:nth-of-type(8) form {
 
 
 /* CLICKED KEY AND SWITCH */
+article label[for="key1"] span,
+article label[for="key2"] span,
+article label[for="key3"] span,
+article label[for="key4"] span,
+article label[for="key5"] span,
+article label[for="key6"] span,
+article label[for="key7"] span {
+    transition: background 250ms ease;
+}
+
 article:has(#key1:checked) label[for="key1"] span,
 article:has(#key2:checked) label[for="key2"] span,
 article:has(#key3:checked) label[for="key3"] span,
@@ -6546,7 +6623,7 @@ article:has(#key4:checked) label[for="key4"] span,
 article:has(#key5:checked) label[for="key5"] span,
 article:has(#key6:checked) label[for="key6"] span,
 article:has(#key7:checked) label[for="key7"] span {
-    background: red;
+    background: var(--computer-darkblue);
 }
 
 article:has(#key1:checked) label[for="key1"],
@@ -6589,6 +6666,62 @@ article:has(#key3:checked) ul:first-of-type li:nth-of-type(7) div:nth-of-type(2)
 article:has(#key3:checked) ul:first-of-type li:nth-of-type(7) div:nth-of-type(3),
 article:has(#key3:checked) ul:first-of-type li:nth-of-type(7) div:nth-of-type(4),
 article:has(#key4:checked) ul:first-of-type li:nth-of-type(7) div:nth-of-type(5)::before,
-article:has(#key5:checked) ul:first-of-type li:nth-of-type(7) div:nth-of-type(5)::after {
+article:has(#key5:checked) ul:first-of-type li:nth-of-type(7) div:nth-of-type(5)::after, 
+article:has(#key6:checked) ul:first-of-type li:nth-of-type(7) div:nth-of-type(6) {
     opacity: 1;
+}
+
+body:has(#key7:checked) {
+    animation: background 2s 500ms alternate infinite;
+}
+
+@keyframes background {
+    0% {
+        background-image: 
+            radial-gradient(var(--blue) 20%, transparent 20%),
+            radial-gradient(var(--blueblue) 20%, transparent 20%);
+        background-position: 0 0, 1rem 1rem;
+        background-size: 2rem 2rem;
+        background-color: rgb(43, 43, 78);
+    }
+    50% {
+        background-image: 
+            radial-gradient(var(--purple) 30%, transparent 50%),
+            radial-gradient(var(--pink) 20%, transparent 50%);
+        background-position: 0 0, 1rem 1rem;
+        background-size: 2rem 2rem;
+        background-color: rgb(43, 43, 78);
+    }
+    100% {
+        background-image: 
+            radial-gradient(var(--red) 20%, transparent 40%),
+            radial-gradient(var(--yellow) 30%, transparent 40%);
+        background-position: 0 0, 1rem 1rem;
+        background-size: 2rem 2rem;
+        background-color: rgb(43, 43, 78);
+    }
+}
+
+
+
+
+/* RESPONSIVE */
+@media only screen and (max-width: 380px) {
+    main > section {
+        margin-left: 4rem;
+    }
+}
+
+@media only screen and (min-width: 550px) {
+    main > section {
+        margin-top: 5rem;
+        transform: scale(1.2);
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    main > section {
+        margin-top: 8rem;
+        transform: scale(1.4);
+    }
 }
