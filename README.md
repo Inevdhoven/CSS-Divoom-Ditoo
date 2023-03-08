@@ -19,8 +19,8 @@ Mijn project werkt in de volgende browsers:
 
 - Chrome
 - Safari
-- Firefox behind a flag, omdat ik gebruik maak van de :has() pseudo class
-- Edge, hierin zou het moeten werken, maar dit heb ik niet kunnen testen.
+- Firefox behind a flag, omdat ik gebruik maak van de :has() pseudo class en dit is in deze browser nog niet toegevoegd.
+- Edge
 
 ## Mijn Proces
 
