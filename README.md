@@ -13,6 +13,15 @@ Je kon uit een aantal verschillende opdrachten kiezen waaronder het maken van ee
 
 Je kunt de toetsen en de switch aanklikken met de muis, om het scherm aan te zetten, maar dit kan ook doormiddel van tab, de spatiebalk en pijltjes toetsen. Wanneer je gefocused bent op de eerste radio button kun je met je pijltjes toetsen door de toetsen gaan. Als je daarna dan naar de switch wilt gaan kun je weer op tab klikken. Met de spatiebalk activeer je de toets.
 
+### In welke browsers werkt mijn project?
+
+Mijn project werkt in de volgende browsers:
+
+- Chrome
+- Safari
+- Firefox behind a flag, omdat ik gebruik maak van de :has() pseudo class
+- Edge, hierin zou het moeten werken, maar dit heb ik niet kunnen testen.
+
 ## Mijn Proces
 
 Mijn hele proces kun je [hier](https://smooth-freeze-4ae.notion.site/CSS-To-The-Rescue-83bc4f197b964d8a98e95837cf69e052) vinden.
