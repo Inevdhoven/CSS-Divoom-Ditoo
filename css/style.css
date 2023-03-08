@@ -21,6 +21,8 @@
     --computer-lightorange: rgb(255,213,164);
     --computer-darkorange: rgb(254,140,81);
     --computer-darkblue: rgb(112, 200, 234);
+
+    --focus: hsl(196, 58%, 36%);
 }
 
 * {
@@ -6428,7 +6430,6 @@ main > section > article ul:nth-of-type(3) li:nth-of-type(7) form {
 main > section > article ul:nth-of-type(3) li:nth-of-type(7) form label {
     display: block;
     transform: translateZ(0) rotateX(-90deg);
-    /* transition: transform 0.2s ease-in-out; */
 }
 
 main > section > article ul:nth-of-type(3) li:nth-of-type(7) label:nth-of-type(4),
@@ -6616,6 +6617,16 @@ article label[for="key7"] span {
     transition: background 250ms ease;
 }
 
+article:has(#key1:focus-visible) label[for="key1"] span,
+article:has(#key2:focus-visible) label[for="key2"] span,
+article:has(#key3:focus-visible) label[for="key3"] span,
+article:has(#key4:focus-visible) label[for="key4"] span,
+article:has(#key5:focus-visible) label[for="key5"] span,
+article:has(#key6:focus-visible) label[for="key6"] span,
+article:has(#key7:focus-visible) label[for="key7"] span {
+    background: var(--focus);
+}
+
 article:has(#key1:checked) label[for="key1"] span,
 article:has(#key2:checked) label[for="key2"] span,
 article:has(#key3:checked) label[for="key3"] span,
@@ -6672,32 +6683,32 @@ article:has(#key6:checked) ul:first-of-type li:nth-of-type(7) div:nth-of-type(6)
 }
 
 body:has(#key7:checked) {
-    animation: background 2s 500ms alternate infinite;
+    animation: background 2s 250ms alternate infinite;
 }
 
 @keyframes background {
     0% {
         background-image: 
-            radial-gradient(var(--blue) 20%, transparent 20%),
-            radial-gradient(var(--blueblue) 20%, transparent 20%);
-        background-position: 0 0, 1rem 1rem;
+            radial-gradient(var(--blue) 20%, transparent 0%),
+            radial-gradient(var(--blueblue) 20%, transparent 0%);
+        background-position: center, 1rem 1rem;
         background-size: 2rem 2rem;
         background-color: rgb(43, 43, 78);
     }
     50% {
         background-image: 
-            radial-gradient(var(--purple) 30%, transparent 50%),
-            radial-gradient(var(--pink) 20%, transparent 50%);
-        background-position: 0 0, 1rem 1rem;
-        background-size: 2rem 2rem;
+            radial-gradient(var(--blue) 30%, transparent 0%),
+            radial-gradient(var(--blueblue) 20%, transparent 0%);
+        background-position: center, 1rem 1rem;
+        background-size: 12rem 12rem;
         background-color: rgb(43, 43, 78);
     }
     100% {
         background-image: 
-            radial-gradient(var(--red) 20%, transparent 40%),
-            radial-gradient(var(--yellow) 30%, transparent 40%);
-        background-position: 0 0, 1rem 1rem;
-        background-size: 2rem 2rem;
+            radial-gradient(var(--blue) 20%, transparent 0%),
+            radial-gradient(var(--blueblue) 30%, transparent 0%);
+        background-position: center, 1rem 1rem;
+        background-size: 5rem 5rem;
         background-color: rgb(43, 43, 78);
     }
 }
