@@ -31,14 +31,7 @@ input[type="range"] {
 }
 
 body {
-    /* background-image: 
-        radial-gradient(var(--blue) 20%, transparent 20%),
-        radial-gradient(var(--blueblue) 20%, transparent 20%);
-    background-position: 0 0, 1rem 1rem;
-    background-size: 2rem 2rem; */
     background-color: rgb(43, 43, 78);
-    
-    /* animation: background 2s infinite; */
 }
 
 main {
@@ -153,6 +146,7 @@ main > section > article ul li:nth-of-type(7) {
     transform: translateX(1em) translateY(1em) translateZ(6em);
 }
 
+/* FIRST SCREEN WITH HEART ANIMATION */
 main > section > article ul:first-of-type li:nth-of-type(7) div:first-of-type::after {
     content: '';
     width: 0.5em;
@@ -628,6 +622,7 @@ main > section > article ul:first-of-type li:nth-of-type(7) div:first-of-type::a
     transition: opacity 250ms ease-in-out;
 }
 
+/* SECOND SCREEN DISCO ANIMATION */
 main > section > article ul:first-of-type li:nth-of-type(7) div {
     width: 100%;
     height: 100%;
@@ -783,10 +778,7 @@ main > section > article ul:first-of-type li:nth-of-type(7) div:first-of-type::b
     transition: opacity 250ms ease-in-out;
 }
 
-main > section > article ul:first-of-type li:nth-of-type(7) div:first-of-type::after {
-    content: '';
-}
-
+/* THIRD SCREEN PACMAN */
 main > section > article ul:first-of-type li:nth-of-type(7) div:nth-of-type(2) {
     width: 1em;
     height: 1em;
@@ -960,6 +952,7 @@ main > section > article ul:first-of-type li:nth-of-type(7) div:nth-of-type(4)::
     bottom: 0;
 }
 
+/* FORTH SCREEN SUNSET GRADIENT */
 main > section > article ul:first-of-type li:nth-of-type(7) div:nth-of-type(5)::before {
     content: '';
     width: 10em;
@@ -972,6 +965,7 @@ main > section > article ul:first-of-type li:nth-of-type(7) div:nth-of-type(5)::
     opacity: 0;
 }
 
+/* FIFTH SCREEN HEU-ROTATE */
 main > section > article ul:first-of-type li:nth-of-type(7) div:nth-of-type(5)::after {
     content: '';
     width: 10em;
@@ -988,6 +982,7 @@ main > section > article ul:first-of-type li:nth-of-type(7) div:nth-of-type(5)::
     opacity: 0;
 }
 
+/* SIXTH SCREEN MIX-BLEND-MODE ANIMATION */
 main > section > article ul:first-of-type li:nth-of-type(7) div:nth-of-type(6) {
     width: 10em;
     height: 10em;
@@ -6581,22 +6576,6 @@ main > section > article ul:nth-of-type(3) li:nth-of-type(7) label:nth-of-type(7
     height: 3.5em;
     transform: rotateX(90deg) translateY(0.12em) translateX(-0.5em) translateZ(-0.1em);
     background-color: var(--computer-darkerblack);
-}
-
-
-
-
-
-/* POWER SWITCH */
-main > section > article ul:nth-of-type(3) li:nth-of-type(8),
-main > section > article ul:nth-of-type(3) li:nth-of-type(8) form,
-main > section > article ul:nth-of-type(3) li:nth-of-type(8) form label {
-    transform-style: preserve-3d;
-    display: none;
-}
-
-main > section > article ul:nth-of-type(3) li:nth-of-type(8) form {
-    transform: rotateY(90deg) translateY(-9em) translateX(7em) translateZ(6em);
 }
 
 
